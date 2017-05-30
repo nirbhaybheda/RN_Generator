@@ -9,9 +9,9 @@
  */
 angular.module('rnGeneratorApp')
   .controller('MainCtrl', function () {
-    this.awesomeThings = [
+    /*this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
-    ];
+    ];*/
   });
