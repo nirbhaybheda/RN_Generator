@@ -1,0 +1,78 @@
+
+
+
+<!--This section is to add multiple items using array-->
+<section>
+<h2 id='loops'><em>Loops</em>: You can use the mustache like syntax: {#tagName} {/tagname} to loop inside an array</h2>
+
+<p>tagName has to be an array of objects, every element of the array will be used to output what is between the opening loop tag and the closing loop tag.</p>
+	<table class="demo">
+		<tr>
+			<td><img src="images/loopTagging.png" alt=""></td>
+			<td>
+				<div>=> <br>Results in:</div>
+			</td>
+			<td><img src="images/loopTaggingResult.PNG" alt=""></td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<h3>Code Used:</h3>
+				<textarea raw="tagLooping.docx">
+	loadFile("tagLooping.docx",function(err,content){
+	doc=new DocxGen(content)
+doc.setData({
+	"products": [{
+ 	 	 "title":"Duk",
+ 	 	 "name":"DukSoftware",
+ 	 	 "reference":"DS0"
+		},{
+ 	 	 "title":"Tingerloo",
+ 	 	 "name":"Tingerlee",
+ 	 	 "reference":"T00"
+	}]}); //set the templateVariables
+doc.render() //apply them
+output=doc.getZip().generate({type:"blob"}) //Output the document using Data-URI
+saveAs(output,"output.docx")
+});
+				</textarea>
+			</td>
+		</tr>
+	</table>
+</section>
+
+<!--To keep formatting intact-->
+<section>
+<h2 id='variables'><em>Variables</em>: Use {tagName} to replace variables</h2>
+<table class="demo">
+<tr>
+	<td>
+		<img src="images/textTagging.PNG" alt="">
+	</td>
+	<td>
+	<div>=> <br>Results in:</div>
+	</td>
+	<td>
+		<img src="images/textTaggingResult.PNG" alt="">
+	</td>
+</tr>
+<tr>
+	<td colspan="3">
+		<h3>Code Used:</h3>
+		<textarea raw='tagExample.docx'>
+            loadFile("tagExample.docx",function(err,content){
+                doc=new DocxGen(content)
+                doc.setData( {"first_name":"Hipp",
+                    "last_name":"Edgar",
+                    "phone":"0652455478",
+                    "description":"New Website"
+                    }
+                ) //set the templateVariables
+                doc.render() //apply them (replace all occurences of {first_name} by Hipp, ...)
+                out=doc.getZip().generate({type:"blob"}) //Output the document using Data-URI
+                saveAs(out,"output.docx")
+            })
+	</textarea>
+	</td>
+</tr>
+</table>
+</section>

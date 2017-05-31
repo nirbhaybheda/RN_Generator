@@ -35,9 +35,9 @@
         </div>
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
           <ul class="nav navbar-nav">
-            <li ng-class="{'active':highlighter=='Home'}" ng-click="highlight('Home')"><a href="#!/">Home</a></li>
-            <li ng-class="{'active':highlighter=='About'}" ng-click="highlight('About')"><a href="#!/about">About</a></li>
-            <li ng-class="{'active':highlighter=='Contact'}" ng-click="highlight('Contact')"><a href="#!/">Contact</a></li>
+            <li ng-class="{'active':activeTab=='Home'}" ng-click="highlight('Home')"><a href="#!/">Home</a></li>
+            <li ng-class="{'active':activeTab=='About'}" ng-click="highlight('About')"><a href="#!/about">About</a></li>
+            <li ng-class="{'active':activeTab=='Contact'}" ng-click="highlight('Contact')"><a href="#!/">Contact</a></li>
           </ul>
 
         </div>
@@ -85,6 +85,13 @@
   <script src="scripts/controllers/main.js"></script>
   <script src="scripts/controllers/about.js"></script>
   <script src="scripts/controllers/body.ctrl.js"></script>
+  <script src="scripts/Lib/docxtemplater/docxgen.js"></script>
+  <script src="scripts/Lib/docxtemplater/docxgen.min.js"></script>
+  <script src="scripts/Lib/docxtemplater/FileSaver.min.js"></script>
+  <script src="scripts/Lib/docxtemplater/jszip-utils.js"></script>
+  <script src="scripts/Lib/docxtemplater/jszip-utils-ie.js"></script>
+  <script src="scripts/Lib/docxtemplater/main.min.js"></script>
+  
   <!-- endbuild -->
 </body>
 

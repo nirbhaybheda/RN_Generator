@@ -7,11 +7,23 @@
  * # MainCtrl
  * Controller of the rnGeneratorApp
  */
+
+
 angular.module('rnGeneratorApp')
-  .controller('MainCtrl', function () {
+  .controller('MainCtrl', ['$scope', function ($scope) {
+
+      $scope.loadpage = function (loadpage) {
+        $scope.devclick = loadpage;
+        console.log($scope.devclick);
+      }
     /*this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];*/
-  });
+  }]);
+
+
+
+
+

@@ -4,10 +4,11 @@
 angular.module('rnGeneratorApp')
     .controller('BodyCtrl', ['$scope', function ($scope) {
 
-        $scope.highlighter = 'Home';
-        $scope.highlight = function (highlighter) {
-            $scope.highlighter = highlighter;
-            console.log($scope.highlighter);
+        $scope.activeTab = 'Home';
+
+        $scope.highlight = function (tab) {
+            $scope.activeTab = tab;
+            console.log($scope.activeTab);
         }
         // alert('Nirbhay');
 
