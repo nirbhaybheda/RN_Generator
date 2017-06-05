@@ -30,8 +30,8 @@ angular
         controller: 'AboutCtrl'
       })
       .when('/docRender', {
-        templateUrl: 'views/docOperations.html'
-
+        templateUrl: 'views/docOperations.html',
+        controller: 'docOpsCtrl'
       })
       .otherwise({
         redirectTo: '/'
