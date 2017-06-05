@@ -21,7 +21,7 @@ angular.module('rnGeneratorApp')
       res: {},
       replace_in: {},
       downloadDevDoc: function () {
-        alasql('SELECT * FROM XLSX("example.xlsx",{headers:true,sheetid:"Sheet1",range:"A1:D100"})',
+        alasql('SELECT * FROM XLSX("documents/example.xlsx",{headers:true,sheetid:"Sheet1",range:"A1:D100"})',
           [], function (data) {
             data.map(function (item) {
               if (Object.keys(item).length > 0) {
