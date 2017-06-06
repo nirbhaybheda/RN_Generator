@@ -13,8 +13,8 @@ angular.module("rnGeneratorApp")
     .constant('CONSTANTS', {
         //API URL
         "API": {
-            // "BASE_URL": "http://"+ window.location.host,
-            "BASE_URL": "http://127.0.0.1:8000",
+            "BASE_URL": "http://"+ window.location.host,
+            // "BASE_URL": "http://127.0.0.1:8000",
             "MODIFY": {
                 "url": "/api/modify",
                 "method": "POST"

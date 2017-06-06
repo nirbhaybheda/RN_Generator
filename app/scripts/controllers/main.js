@@ -43,7 +43,7 @@ angular.module('rnGeneratorApp')
                 appServices.doAPIRequest(httpParams)
                   .then(function (response) {
                     // $location.path('google.com');
-                    $window.location.href = 'http://10.0.0.7:8000/api/modify';
+                    $window.location.href = CONSTANTS.API.BASE_URL + '/api/modify';
                   })
 
               }, function (error) {
